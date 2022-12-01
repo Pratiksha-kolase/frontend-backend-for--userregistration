@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login</title>
+<link rel="stylesheet" th:href="@{/register.css}" />
+<script type="text/javascript"  th:src="@{/js/register.js}"></script>
+   
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="logo.png" class="logo">
+    <div class="menu">
+        <ul>
+            <li><a href=" "  th:href="@{/home.html}">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="LoginNft.html">LOGIN</a></li>
+        </ul>
+    </div>
+</div>
+    <div class="form">
+    <div method="post" class="box">
+       <div class="btn-box">
+            <h1>Register Here</h1>
+               </div>
+        
+        <form action="LoginNft .html" name="myForm" th:action="@{/registerUser}" id="login" class="input" th:object="${user}" method="post" th:onkeyup="return validation()"  th:onsubmit="return validation()">
+            
+                <input type="text" th:field="*{name}" class="input-fields" name="fullname" id="fullname" placeholder="Enter Full Name">
+                <span id="name-error"></span><br>
+                <input type="email"  th:field="*{email}"class="input-fields" name="email" id="email" placeholder="Enter Email"
+                    ><span id="email-error"></span><br>
+                <input type="number"  th:field="*{phone}"class="input-fields" name="phone" id="phone" maxlength=10
+                    placeholder="Enter Phone number" ><span id="phone-error"></span><br>
+                <input type="text"  th:field="*{username}"class="input-fields" name="username" id="username"
+                    placeholder="Enter User Name"><span id="user-error"></span><br>
+                <input type="password"  th:field="*{password}"class="input-fields" name="password" id="password"
+                    placeholder="Enter Password"><span id="pass-error"></span><br>
+                <input type="password"  th:field="*{conpassword}"class="input-fields" name="repassword" id="repassword"
+                    placeholder="Confirm Password"><span id="repass-error"></span><br> <br>
+                <button type="submit" class="submit-button" value="submit">Register</button><br>
+            </form>
+           
+  
+        
+    
+    </div>
+</div>
+</body>
+
+</html>
